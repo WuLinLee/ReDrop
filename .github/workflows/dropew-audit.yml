@@ -115,10 +115,21 @@ jobs:
           JADX_BIN=$(find "$RUNNER_TEMP/jadx-dist" -type f -path "*/bin/jadx" -print -quit)
           test -n "$JADX_BIN"
           chmod +x "$JADX_BIN"
-          "$JADX_BIN" --deobf -d "$RUNNER_TEMP/jadx-out" "$RUNNER_TEMP/dropew.apk"
+          set +e
+          "$JADX_BIN" --deobf --no-res -d "$RUNNER_TEMP/jadx-out" "$RUNNER_TEMP/dropew.apk"
+          JADX_STATUS=$?
+          set -e
+          if [ "$JADX_STATUS" -ne 0 ]; then
+            echo "JADX returned $JADX_STATUS; preserving any partial source output."
+          fi
 
       - name: Summarize decompiled structure without copying source
-        run: python tools/summarize_jadx.py --sources "$RUNNER_TEMP/jadx-out/sources" --output analysis/android/decompiled-structure.json
+        run: |
+          if [ -d "$RUNNER_TEMP/jadx-out/sources" ]; then
+            python tools/summarize_jadx.py --sources "$RUNNER_TEMP/jadx-out/sources" --output analysis/android/decompiled-structure.json
+          else
+            printf "# JADX result\n\nNo Java source tree was emitted. The binary Manifest/DEX analysis is still available in this folder.\n" > analysis/android/decompilation-status.md
+          fi
 
       - name: Upload sanitized Android analysis
         uses: actions/upload-artifact@v4
