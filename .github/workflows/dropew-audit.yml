@@ -108,7 +108,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          JADX_URL=$(gh api repos/skylot/jadx/releases/latest --jq '.assets[] | select(.name | test("^jadx-[0-9].*\\.zip$")) | .browser_download_url' | head -n 1)
+          JADX_URL=$(gh api repos/skylot/jadx/releases/latest --jq '.assets[] | select(.name | test("^jadx-[0-9].*zip$")) | .browser_download_url' | head -n 1)
           test -n "$JADX_URL"
           curl --fail --location "$JADX_URL" --output "$RUNNER_TEMP/jadx.zip"
           unzip -q "$RUNNER_TEMP/jadx.zip" -d "$RUNNER_TEMP/jadx-dist"
