@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "tools/audit_edge_extension.py"
+      - "tools/audit_dropew_website.py"
       - ".github/workflows/dropew-audit.yml"
   workflow_dispatch:
     inputs:
@@ -40,11 +41,14 @@ jobs:
       - name: Download and inspect public Edge package
         run: python tools/audit_edge_extension.py --extension-id "${{ inputs.extension_id || 'glglacjhoenjihpamfmokhkocpibpdkh' }}"
 
+      - name: Inspect official website and Android install entry points
+        run: python tools/audit_dropew_website.py
+
       - name: Upload sanitized report as an artifact
         uses: actions/upload-artifact@v4
         with:
           name: dropew-edge-analysis
-          path: analysis/edge/
+          path: analysis/
           if-no-files-found: error
           retention-days: 14
 
@@ -52,8 +56,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain analysis/edge)" ]; then
-            git add analysis/edge/
+          if [ -n "$(git status --porcelain analysis)" ]; then
+            git add analysis/
             git commit -m "Add Dropew Edge extension analysis"
             git push origin HEAD:main
           else
