@@ -6,10 +6,11 @@ from pathlib import Path
 
 MAX_BYTES = 1_500_000_000
 ALLOWED = ("apkpure.com", "apkpure.net")
+TRUSTED_CDN_HOSTS = ("data.winudf.com",)
 
 def trusted(host: str) -> bool:
     host = (host or "").lower().rstrip(".")
-    return any(host == domain or host.endswith("." + domain) for domain in ALLOWED)
+    return host in TRUSTED_CDN_HOSTS or any(host == domain or host.endswith("." + domain) for domain in ALLOWED)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
