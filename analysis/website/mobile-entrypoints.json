@@ -1,0 +1,64 @@
+{
+  "source": "https://dropew.com/",
+  "fetch_ok": true,
+  "links": [],
+  "scripts": [
+    "https://dropew.com/assets/index-BbYf9ZdC.js",
+    "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+  ],
+  "meta": [
+    {
+      "name": null,
+      "property": null,
+      "content": null
+    },
+    {
+      "name": "viewport",
+      "property": null,
+      "content": "width=device-width, initial-scale=1, viewport-fit=cover"
+    },
+    {
+      "name": "theme-color",
+      "property": null,
+      "content": "#ffffff"
+    },
+    {
+      "name": "google-adsense-account",
+      "property": null,
+      "content": "ca-pub-5176375824019181"
+    },
+    {
+      "name": "google-site-verification",
+      "property": null,
+      "content": "jSADLt6PZBB7zuqZBGliMjgMfmDXmsv7s4Wzf7K-AS0"
+    },
+    {
+      "name": "description",
+      "property": null,
+      "content": "Transfer files and text instantly between your phone, tablet, and computer. No login, no app installation, and no file size limits. Safe, encrypted, and completely free. Start sharing now!"
+    }
+  ],
+  "manifest": null,
+  "assetlinks": {
+    "url": "https://dropew.com/.well-known/assetlinks.json",
+    "data": [
+      {
+        "relation": [
+          "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+          "namespace": "android_app",
+          "package_name": "com.ztech.dropew",
+          "sha256_cert_fingerprints": [
+            "48:2A:A5:C5:5B:20:97:AE:F6:AC:40:19:B3:9E:EA:F7:4E:3A:5A:30:67:60:B0:99:B3:70:0E:6B:BE:09:DF:C4",
+            "1F:BA:AB:22:E7:6F:86:BE:55:8B:05:B9:A1:B9:F6:14:B9:13:1A:A3:D0:F7:FA:98:31:D2:0F:34:63:03:62:0B"
+          ]
+        }
+      }
+    ]
+  },
+  "errors": [],
+  "final_url": "https://dropew.com/",
+  "content_type": "text/html; charset=utf-8",
+  "title": "Dropew - Transfer Files & Text across Devices Instantly"
+}
