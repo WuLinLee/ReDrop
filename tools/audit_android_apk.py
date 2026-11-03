@@ -13,6 +13,7 @@ import json
 import logging
 import re
 import sys
+import tempfile
 import urllib.parse
 import zipfile
 from pathlib import Path
@@ -86,9 +87,22 @@ def main() -> int:
     parser.add_argument("--output", default="analysis/android")
     parser.add_argument("--expected-package", default="com.ztech.dropew")
     args = parser.parse_args()
-    apk_path = Path(args.apk)
-    if not apk_path.is_file():
-        raise FileNotFoundError(apk_path)
+    original_path = Path(args.apk)
+    if not original_path.is_file():
+        raise FileNotFoundError(original_path)
+    apk_path = original_path
+    split_apk_entries = []
+    with zipfile.ZipFile(original_path) as outer_archive:
+        outer_names = outer_archive.namelist()
+        is_plain_apk = "AndroidManifest.xml" in outer_names and any(re.fullmatch(r"classes\\d*\\.dex", Path(n).name) for n in outer_names)
+        embedded_apks = [n for n in outer_names if n.lower().endswith(".apk") and not n.startswith("../") and not n.startswith("/")]
+        if not is_plain_apk and embedded_apks:
+            split_apk_entries = embedded_apks
+            base_candidates = [n for n in embedded_apks if Path(n).name.lower() in ("base.apk", "base-master.apk")]
+            chosen = base_candidates[0] if base_candidates else sorted(embedded_apks)[0]
+            temp_dir = Path(tempfile.mkdtemp(prefix="redrop-xapk-"))
+            apk_path = temp_dir / "base.apk"
+            apk_path.write_bytes(outer_archive.read(chosen))
 
     try:
         from androguard.core.apk import APK
@@ -211,6 +225,8 @@ def main() -> int:
         "target_sdk": target_sdk,
         "apk_size_bytes": apk_path.stat().st_size,
         "apk_sha256": sha256_file(apk_path),
+        "downloaded_container_sha256": sha256_file(original_path),
+        "split_apk_entry_count": len(split_apk_entries),
         "permissions": sorted(apk.get_permissions() or []),
         "application_manifest_flags": app_attrs,
         "components": components,
@@ -252,6 +268,8 @@ def main() -> int:
         "- Target SDK: " + str(target_sdk),
         "- APK size: " + str(summary["apk_size_bytes"]) + " bytes",
         "- APK SHA-256: " + summary["apk_sha256"],
+        "- Downloaded container SHA-256: " + summary["downloaded_container_sha256"],
+        "- Embedded split APKs: " + str(len(split_apk_entries)),
         "",
         "## Manifest and components",
         "",
