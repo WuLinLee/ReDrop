@@ -23,7 +23,11 @@ def main() -> int:
     if args.package != "com.ztech.dropew":
         parser.error("The package name is pinned to com.ztech.dropew for this project.")
 
-    request = urllib.request.Request(args.url, headers={
+    download_url = args.url
+    page_parts = [part for part in parsed.path.split("/") if part]
+    if (parsed.hostname or "").lower() in ("apkpure.com", "www.apkpure.com") and len(page_parts) >= 2 and page_parts[0] == "p" and page_parts[1] == args.package:
+        download_url = "https://d.apkpure.com/b/APK/" + args.package + "?version=latest"
+    request = urllib.request.Request(download_url, headers={
         "User-Agent": "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/130 Mobile Safari/537.36",
         "Accept": "application/vnd.android.package-archive, application/octet-stream, */*",
     })
