@@ -1,0 +1,195 @@
+{
+  "note": "Static text indicators, not proof of runtime behavior.",
+  "marker_counts": {
+    "authentication": 33,
+    "browser_storage": 5,
+    "file_transfer": 51,
+    "messaging": 6,
+    "network": 13,
+    "resumable_transfer": 26,
+    "web_storage": 72
+  },
+  "javascript_files": [
+    {
+      "path": "background.js",
+      "bytes": 781,
+      "line_count": 29,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/app_install-MxwJJJJB.js",
+      "bytes": 16333,
+      "line_count": 14,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/ar-BIn-hw9s.js",
+      "bytes": 9209,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/bn-Dbe8rSGf.js",
+      "bytes": 13534,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/chat-Y5Wn7ztV.js",
+      "bytes": 205211,
+      "line_count": 2400,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/chunk.4TUIT776-BWdorDtR.js",
+      "bytes": 3617,
+      "line_count": 16,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/de-K5m_7ld3.js",
+      "bytes": 7574,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/download-C9U4elYN.js",
+      "bytes": 8483,
+      "line_count": 100,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/en-CW_RNu5i.js",
+      "bytes": 6871,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/es-BhQ9f7Fp.js",
+      "bytes": 7456,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/fr-BwYIJhSA.js",
+      "bytes": 7837,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/hi-DcJ2zM5p.js",
+      "bytes": 13868,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/id-D2G4YCFr.js",
+      "bytes": 6856,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/index-ByMdYzRZ.js",
+      "bytes": 47418,
+      "line_count": 150,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/it-CB2rKIvK.js",
+      "bytes": 7096,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/ja-BnJc1Ira.js",
+      "bytes": 8712,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/ko-D6b7mt6u.js",
+      "bytes": 7710,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/language_dialog-DtGXdnY9.js",
+      "bytes": 3756,
+      "line_count": 85,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/loading_page-BO8WpUeq.js",
+      "bytes": 12968,
+      "line_count": 65,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/pre_signin-L6bYCmOH.js",
+      "bytes": 1645,
+      "line_count": 2,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/pt-CYC863UP.js",
+      "bytes": 7057,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/qr_scan-PAnkXgII.js",
+      "bytes": 64105,
+      "line_count": 1051,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/R-nIvswPQB.js",
+      "bytes": 3116,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/review_dialog-DqxTjiJB.js",
+      "bytes": 2322,
+      "line_count": 13,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/ru-D5z6ijTu.js",
+      "bytes": 10985,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/signin-CGB0maNp.js",
+      "bytes": 111842,
+      "line_count": 936,
+      "looks_minified": false
+    },
+    {
+      "path": "assets/ur-DByagu5w.js",
+      "bytes": 10350,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/utils-C99QKKlO.js",
+      "bytes": 264769,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/vi-DQ3sMP6t.js",
+      "bytes": 8190,
+      "line_count": 2,
+      "looks_minified": true
+    },
+    {
+      "path": "assets/zh-CPX74SJB.js",
+      "bytes": 6671,
+      "line_count": 2,
+      "looks_minified": true
+    }
+  ],
+  "source_map_references": []
+}

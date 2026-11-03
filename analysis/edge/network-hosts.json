@@ -1,0 +1,14 @@
+{
+  "note": "Only hostname counts are retained. URLs, paths, query strings, and request contents are not committed.",
+  "host_occurrences": {
+    "$": 10,
+    "apkpure.com": 1,
+    "apps.apple.com": 1,
+    "chromewebstore.google.com": 1,
+    "dev.dropew.com": 2,
+    "dropew.com": 2,
+    "intl-tel-input.com": 1,
+    "metrics.dropew.com": 1,
+    "www.w3.org": 26
+  }
+}

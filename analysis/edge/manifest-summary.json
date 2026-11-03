@@ -1,0 +1,20 @@
+{
+  "name": "__MSG_extName__",
+  "version": "4.3.1",
+  "manifest_version": 3,
+  "description": "__MSG_extDescription__",
+  "permissions": [
+    "storage",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://*.dropew.com/*",
+    "wss://*.dropew.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "drop.png"
+  }
+}
