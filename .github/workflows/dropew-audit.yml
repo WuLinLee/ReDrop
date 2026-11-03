@@ -6,6 +6,9 @@ on:
     paths:
       - "tools/audit_edge_extension.py"
       - "tools/audit_dropew_website.py"
+      - "tools/download_apk.py"
+      - "tools/audit_android_apk.py"
+      - "tools/summarize_jadx.py"
       - ".github/workflows/dropew-audit.yml"
   workflow_dispatch:
     inputs:
@@ -13,6 +16,11 @@ on:
         description: Microsoft Edge extension ID
         required: true
         default: glglacjhoenjihpamfmokhkocpibpdkh
+        type: string
+      android_apk_url:
+        description: APKPure app page or direct APK URL for com.ztech.dropew; leave empty to skip Android analysis
+        required: false
+        default: https://apkpure.com/p/com.ztech.dropew
         type: string
 
 permissions:
@@ -62,4 +70,70 @@ jobs:
             git push origin HEAD:main
           else
             echo "No analysis changes to commit."
+          fi
+
+  android-apk-analysis:
+    needs: edge-extension
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.android_apk_url != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download APKPure package into runner temp
+        run: python tools/download_apk.py --url "${{ inputs.android_apk_url }}" --output "$RUNNER_TEMP/dropew.apk" --package com.ztech.dropew
+
+      - name: Install Android analysis dependencies
+        run: python -m pip install --disable-pip-version-check androguard
+
+      - name: Analyze APK manifest, DEX, permissions and endpoint indicators
+        run: python tools/audit_android_apk.py --apk "$RUNNER_TEMP/dropew.apk" --output analysis/android --expected-package com.ztech.dropew
+
+      - name: Set up Java for JADX
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Decompile DEX in ephemeral runner workspace
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          JADX_URL=$(gh api repos/skylot/jadx/releases/latest --jq '.assets[] | select(.name | endswith(".zip")) | .browser_download_url' | head -n 1)
+          test -n "$JADX_URL"
+          curl --fail --location "$JADX_URL" --output "$RUNNER_TEMP/jadx.zip"
+          unzip -q "$RUNNER_TEMP/jadx.zip" -d "$RUNNER_TEMP/jadx-dist"
+          chmod +x "$RUNNER_TEMP/jadx-dist/bin/jadx"
+          "$RUNNER_TEMP/jadx-dist/bin/jadx" --deobf -d "$RUNNER_TEMP/jadx-out" "$RUNNER_TEMP/dropew.apk"
+
+      - name: Summarize decompiled structure without copying source
+        run: python tools/summarize_jadx.py --sources "$RUNNER_TEMP/jadx-out/sources" --output analysis/android/decompiled-structure.json
+
+      - name: Upload sanitized Android analysis
+        uses: actions/upload-artifact@v4
+        with:
+          name: dropew-android-analysis
+          path: analysis/android/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit sanitized Android analysis to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain analysis/android)" ]; then
+            git add analysis/android/
+            git commit -m "Add Dropew Android APK analysis"
+            git push origin HEAD:main
+          else
+            echo "No Android analysis changes to commit."
           fi
