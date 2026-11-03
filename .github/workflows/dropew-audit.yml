@@ -74,7 +74,7 @@ jobs:
 
   android-apk-analysis:
     needs: edge-extension
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.android_apk_url != '' }}
+    if: ${{ github.event_name == 'push' || inputs.android_apk_url != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -90,7 +90,7 @@ jobs:
           python-version: "3.12"
 
       - name: Download APKPure package into runner temp
-        run: python tools/download_apk.py --url "${{ inputs.android_apk_url }}" --output "$RUNNER_TEMP/dropew.apk" --package com.ztech.dropew
+        run: python tools/download_apk.py --url "${{ inputs.android_apk_url || 'https://apkpure.com/p/com.ztech.dropew' }}" --output "$RUNNER_TEMP/dropew.apk" --package com.ztech.dropew
 
       - name: Install Android analysis dependencies
         run: python -m pip install --disable-pip-version-check androguard
@@ -108,12 +108,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          JADX_URL=$(gh api repos/skylot/jadx/releases/latest --jq '.assets[] | select(.name | endswith(".zip")) | .browser_download_url' | head -n 1)
+          JADX_URL=$(gh api repos/skylot/jadx/releases/latest --jq '.assets[] | select(.name | test("^jadx-[0-9].*\\.zip$")) | .browser_download_url' | head -n 1)
           test -n "$JADX_URL"
           curl --fail --location "$JADX_URL" --output "$RUNNER_TEMP/jadx.zip"
           unzip -q "$RUNNER_TEMP/jadx.zip" -d "$RUNNER_TEMP/jadx-dist"
-          chmod +x "$RUNNER_TEMP/jadx-dist/bin/jadx"
-          "$RUNNER_TEMP/jadx-dist/bin/jadx" --deobf -d "$RUNNER_TEMP/jadx-out" "$RUNNER_TEMP/dropew.apk"
+          JADX_BIN=$(find "$RUNNER_TEMP/jadx-dist" -type f -path "*/bin/jadx" -print -quit)
+          test -n "$JADX_BIN"
+          chmod +x "$JADX_BIN"
+          "$JADX_BIN" --deobf -d "$RUNNER_TEMP/jadx-out" "$RUNNER_TEMP/dropew.apk"
 
       - name: Summarize decompiled structure without copying source
         run: python tools/summarize_jadx.py --sources "$RUNNER_TEMP/jadx-out/sources" --output analysis/android/decompiled-structure.json
