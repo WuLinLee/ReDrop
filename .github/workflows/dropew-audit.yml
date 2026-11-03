@@ -1,0 +1,58 @@
+name: Dropew package audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      extension_id:
+        description: Microsoft Edge extension ID
+        required: true
+        default: glglacjhoenjihpamfmokhkocpibpdkh
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dropew-audit
+  cancel-in-progress: false
+
+jobs:
+  edge-extension:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download and inspect public Edge package
+        run: python tools/audit_edge_extension.py --extension-id "${{ inputs.extension_id }}"
+
+      - name: Upload sanitized report as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dropew-edge-analysis
+          path: analysis/edge/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit sanitized results to main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain analysis/edge)" ]; then
+            git add analysis/edge/
+            git commit -m "Add Dropew Edge extension analysis"
+            git push origin HEAD:main
+          else
+            echo "No analysis changes to commit."
+          fi
