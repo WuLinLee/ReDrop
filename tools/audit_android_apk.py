@@ -94,7 +94,7 @@ def main() -> int:
     split_apk_entries = []
     with zipfile.ZipFile(original_path) as outer_archive:
         outer_names = outer_archive.namelist()
-        is_plain_apk = "AndroidManifest.xml" in outer_names and any(re.fullmatch(r"classes\\d*\\.dex", Path(n).name) for n in outer_names)
+        is_plain_apk = "AndroidManifest.xml" in outer_names and any(re.fullmatch(r"classes\d*\.dex", Path(n).name) for n in outer_names)
         embedded_apks = [n for n in outer_names if n.lower().endswith(".apk") and not n.startswith("../") and not n.startswith("/")]
         if not is_plain_apk and embedded_apks:
             split_apk_entries = embedded_apks
