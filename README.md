@@ -36,7 +36,7 @@ The downloaded package was verified to declare `com.ztech.dropew`, matching the 
 - APK version: 1.0, version code 2.
 - Minimum SDK 29; target SDK 35.
 - APK size: 5,296,915 bytes.
-- SHA-256: `6a6570c9de893f02a6ce6c7ddf8fcb3113856b075489526d0b498dbbd26f6609a`.
+- SHA-256: `6a6570c9de893f02a6ce6c7ddf8cb3113856b075489526d0b498dbbd26f6609a`.
 - DEX inventory: 1 file, 1,628 classes and 7,925 methods.
 - Main activity: `com.ztech.dropew.MainActivity`.
 - QR scan activity: `com.ztech.dropew.QrScanActivity`.
