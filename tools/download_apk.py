@@ -5,7 +5,7 @@ import argparse, hashlib, os, sys, urllib.parse, urllib.request
 from pathlib import Path
 
 MAX_BYTES = 1_500_000_000
-ALLOWED = ("apkpure.com",)
+ALLOWED = ("apkpure.com", "apkpure.net")
 
 def trusted(host: str) -> bool:
     host = (host or "").lower().rstrip(".")
