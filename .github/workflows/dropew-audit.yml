@@ -1,6 +1,11 @@
 name: Dropew package audit
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/audit_edge_extension.py"
+      - ".github/workflows/dropew-audit.yml"
   workflow_dispatch:
     inputs:
       extension_id:
@@ -30,10 +35,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Download and inspect public Edge package
-        run: python tools/audit_edge_extension.py --extension-id "${{ inputs.extension_id }}"
+        run: python tools/audit_edge_extension.py --extension-id "${{ inputs.extension_id || 'glglacjhoenjihpamfmokhkocpibpdkh' }}"
 
       - name: Upload sanitized report as an artifact
         uses: actions/upload-artifact@v4
@@ -44,8 +49,6 @@ jobs:
           retention-days: 14
 
       - name: Commit sanitized results to main
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
