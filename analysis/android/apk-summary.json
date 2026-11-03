@@ -1,0 +1,1702 @@
+{
+  "source": "APKPure URL supplied for this research run",
+  "expected_package": "com.ztech.dropew",
+  "actual_package": "com.ztech.dropew",
+  "app_name": "Dropew",
+  "version_name": "1.0",
+  "version_code": "2",
+  "min_sdk": "29",
+  "target_sdk": "35",
+  "apk_size_bytes": 5296915,
+  "apk_sha256": "6a6570c9de893f02a6ce6c7ddf8cb3113856b075489526d0b498dbbd26f6609a",
+  "downloaded_container_sha256": "6a6570c9de893f02a6ce6c7ddf8cb3113856b075489526d0b498dbbd26f6609a",
+  "split_apk_entry_count": 0,
+  "permissions": [
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.CAMERA",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.INTERNET",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.REQUEST_INSTALL_PACKAGES",
+    "com.ztech.dropew.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "application_manifest_flags": {
+    "allowBackup": "false"
+  },
+  "components": {
+    "activities": [
+      "androidx.credentials.playservices.HiddenActivity",
+      "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+      "com.google.android.gms.common.api.GoogleApiActivity",
+      "com.ztech.dropew.MainActivity",
+      "com.ztech.dropew.QrScanActivity"
+    ],
+    "services": [
+      "androidx.camera.core.impl.MetadataHolderService",
+      "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+      "com.google.android.gms.auth.api.signin.RevocationBoundService",
+      "com.ztech.dropew.transfer.TransferService"
+    ],
+    "receivers": [
+      "androidx.profileinstaller.ProfileInstallReceiver"
+    ],
+    "providers": [
+      "androidx.core.content.FileProvider",
+      "androidx.startup.InitializationProvider"
+    ],
+    "main_activity": "com.ztech.dropew.MainActivity"
+  },
+  "dex": {
+    "files": [
+      {
+        "path": "classes.dex",
+        "size_bytes": 1400908
+      }
+    ],
+    "class_count": 1628,
+    "method_count": 7925,
+    "top_package_prefixes": {
+      "androidx/camera/camera2": 51,
+      "org/chromium/support_lib_boundary": 41,
+      "com/google/android": 20,
+      "androidx/camera/core": 14,
+      "androidx/appcompat/widget": 13,
+      "com/ztech/dropew": 4,
+      "androidx/core/app": 3,
+      "androidx/appcompat/view": 3,
+      "androidx/camera/lifecycle": 3,
+      "androidx/camera/view": 3,
+      "androidx/credentials/playservices": 3,
+      "androidx/fragment/app": 3,
+      "android/support/v4": 2,
+      "androidx/core/graphics": 2,
+      "androidx/emoji2/text": 2,
+      "android/os/OutcomeReceiver;": 1,
+      "android/window/OnBackInvokedCallback;": 1,
+      "android/window/OnBackAnimationCallback;": 1,
+      "androidx/activity/ComponentActivity$4;": 1,
+      "androidx/activity/ImmLeaksCleaner;": 1,
+      "androidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;": 1,
+      "androidx/activity/a;": 1,
+      "androidx/annotation/Keep;": 1,
+      "androidx/appcompat/app": 1,
+      "androidx/core/content": 1,
+      "androidx/versionedparcelable/CustomVersionedParcelable;": 1,
+      "androidx/core/widget": 1,
+      "androidx/lifecycle/CompositeGeneratedAdaptersObserver;": 1,
+      "androidx/lifecycle/DefaultLifecycleObserverAdapter;": 1,
+      "androidx/lifecycle/LegacySavedStateHandleController$tryToAddRecreator$1;": 1,
+      "androidx/lifecycle/LifecycleCoroutineScopeImpl;": 1,
+      "androidx/lifecycle/LiveData$LifecycleBoundObserver;": 1,
+      "androidx/lifecycle/ProcessLifecycleInitializer;": 1,
+      "androidx/lifecycle/ReflectiveGenericLifecycleObserver;": 1,
+      "androidx/lifecycle/RepeatOnLifecycleKt$repeatOnLifecycle$3$1$1$1;": 1,
+      "androidx/lifecycle/SavedStateHandleAttacher;": 1,
+      "androidx/lifecycle/SavedStateHandleController;": 1,
+      "androidx/lifecycle/SingleGeneratedAdapterObserver;": 1,
+      "androidx/lifecycle/WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$2$observer$1;": 1,
+      "androidx/lifecycle/a;": 1
+    }
+  },
+  "native_libraries": [
+    "lib/arm64-v8a/libimage_processing_util_jni.so",
+    "lib/arm64-v8a/libsurface_util_jni.so",
+    "lib/arm64-v8a/libzxingcpp_android.so",
+    "lib/armeabi-v7a/libimage_processing_util_jni.so",
+    "lib/armeabi-v7a/libsurface_util_jni.so",
+    "lib/armeabi-v7a/libzxingcpp_android.so"
+  ],
+  "framework_indicators": {
+    "WebView": 2
+  },
+  "feature_indicators": {
+    "authentication": 46,
+    "file_transfer": 25,
+    "resumable_transfer": 100,
+    "device_linking": 10,
+    "persistent_storage": 3
+  },
+  "unique_dex_string_count": 9822,
+  "network_endpoint_indicators": [
+    {
+      "scheme": "https",
+      "host": "accounts.google.com",
+      "path_prefix": "/o/oauth2/revoke",
+      "occurrences": 1
+    },
+    {
+      "scheme": "https",
+      "host": "dropew.com",
+      "path_prefix": "/",
+      "occurrences": 1
+    },
+    {
+      "scheme": "https",
+      "host": "dropew.com",
+      "path_prefix": "/drop",
+      "occurrences": 1
+    },
+    {
+      "scheme": "https",
+      "host": "dropew.com",
+      "path_prefix": "/server/android/update",
+      "occurrences": 1
+    },
+    {
+      "scheme": "https",
+      "host": "issuetracker.google.com",
+      "path_prefix": "/issues/new",
+      "occurrences": 1
+    },
+    {
+      "scheme": "https",
+      "host": "www.googleapis.com",
+      "path_prefix": "/auth/games",
+      "occurrences": 1
+    },
+    {
+      "scheme": "https",
+      "host": "www.googleapis.com",
+      "path_prefix": "/auth/games_lite",
+      "occurrences": 1
+    }
+  ],
+  "archive_entry_count": 382,
+  "archive_inventory": [
+    {
+      "path": "META-INF/com/android/build/gradle/app-metadata.properties",
+      "size_bytes": 56
+    },
+    {
+      "path": "META-INF/version-control-info.textproto",
+      "size_bytes": 46
+    },
+    {
+      "path": "assets/dexopt/baseline.prof",
+      "size_bytes": 1685
+    },
+    {
+      "path": "assets/dexopt/baseline.profm",
+      "size_bytes": 266
+    },
+    {
+      "path": "classes.dex",
+      "size_bytes": 1400908
+    },
+    {
+      "path": "lib/arm64-v8a/libimage_processing_util_jni.so",
+      "size_bytes": 32544
+    },
+    {
+      "path": "lib/arm64-v8a/libsurface_util_jni.so",
+      "size_bytes": 4896
+    },
+    {
+      "path": "lib/arm64-v8a/libzxingcpp_android.so",
+      "size_bytes": 1746848
+    },
+    {
+      "path": "lib/armeabi-v7a/libimage_processing_util_jni.so",
+      "size_bytes": 24448
+    },
+    {
+      "path": "lib/armeabi-v7a/libsurface_util_jni.so",
+      "size_bytes": 3460
+    },
+    {
+      "path": "lib/armeabi-v7a/libzxingcpp_android.so",
+      "size_bytes": 1229592
+    },
+    {
+      "path": "DebugProbesKt.bin",
+      "size_bytes": 1738
+    },
+    {
+      "path": "META-INF/androidx.activity_activity-ktx.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.activity_activity.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.annotation_annotation-experimental.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.appcompat_appcompat-resources.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.appcompat_appcompat.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.arch.core_core-runtime.version",
+      "size_bytes": 67
+    },
+    {
+      "path": "META-INF/androidx.browser_browser.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.camera.featurecombinationquery_featurecombinationquery.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.camera_camera-camera2.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.camera_camera-core.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.camera_camera-lifecycle.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.camera_camera-video.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.camera_camera-view.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.core_core-ktx.version",
+      "size_bytes": 7
+    },
+    {
+      "path": "META-INF/androidx.core_core.version",
+      "size_bytes": 7
+    },
+    {
+      "path": "META-INF/androidx.credentials_credentials-play-services-auth.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.credentials_credentials.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.cursoradapter_cursoradapter.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.customview_customview.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.drawerlayout_drawerlayout.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.emoji2_emoji2-views-helper.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.emoji2_emoji2.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.exifinterface_exifinterface.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.fragment_fragment.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.interpolator_interpolator.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core.version",
+      "size_bytes": 78
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-livedata.version",
+      "size_bytes": 73
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-process.version",
+      "size_bytes": 72
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version",
+      "size_bytes": 76
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-runtime.version",
+      "size_bytes": 72
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version",
+      "size_bytes": 78
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version",
+      "size_bytes": 85
+    },
+    {
+      "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel.version",
+      "size_bytes": 74
+    },
+    {
+      "path": "META-INF/androidx.loader_loader.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.profileinstaller_profileinstaller.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.savedstate_savedstate-ktx.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.savedstate_savedstate.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.startup_startup-runtime.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.tracing_tracing-ktx.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.tracing_tracing.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.vectordrawable_vectordrawable-animated.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.vectordrawable_vectordrawable.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.versionedparcelable_versionedparcelable.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.viewpager_viewpager.version",
+      "size_bytes": 6
+    },
+    {
+      "path": "META-INF/androidx.webkit_webkit.version",
+      "size_bytes": 7
+    },
+    {
+      "path": "META-INF/kotlinx_coroutines_android.version",
+      "size_bytes": 5
+    },
+    {
+      "path": "META-INF/kotlinx_coroutines_core.version",
+      "size_bytes": 5
+    },
+    {
+      "path": "googleid.properties",
+      "size_bytes": 52
+    },
+    {
+      "path": "kotlin/annotation/annotation.kotlin_builtins",
+      "size_bytes": 1022
+    },
+    {
+      "path": "kotlin/collections/collections.kotlin_builtins",
+      "size_bytes": 8625
+    },
+    {
+      "path": "kotlin/concurrent/atomics/atomics.kotlin_builtins",
+      "size_bytes": 2882
+    },
+    {
+      "path": "kotlin/coroutines/coroutines.kotlin_builtins",
+      "size_bytes": 139
+    },
+    {
+      "path": "kotlin/internal/internal.kotlin_builtins",
+      "size_bytes": 596
+    },
+    {
+      "path": "kotlin/kotlin.kotlin_builtins",
+      "size_bytes": 30920
+    },
+    {
+      "path": "kotlin/ranges/ranges.kotlin_builtins",
+      "size_bytes": 4353
+    },
+    {
+      "path": "kotlin/reflect/reflect.kotlin_builtins",
+      "size_bytes": 4859
+    },
+    {
+      "path": "play-services-auth-api-phone.properties",
+      "size_bytes": 94
+    },
+    {
+      "path": "play-services-auth-base.properties",
+      "size_bytes": 86
+    },
+    {
+      "path": "play-services-auth.properties",
+      "size_bytes": 74
+    },
+    {
+      "path": "play-services-base.properties",
+      "size_bytes": 74
+    },
+    {
+      "path": "play-services-basement.properties",
+      "size_bytes": 82
+    },
+    {
+      "path": "play-services-fido.properties",
+      "size_bytes": 74
+    },
+    {
+      "path": "play-services-tasks.properties",
+      "size_bytes": 76
+    },
+    {
+      "path": "AndroidManifest.xml",
+      "size_bytes": 12516
+    },
+    {
+      "path": "res/-B.png",
+      "size_bytes": 281
+    },
+    {
+      "path": "res/-N.png",
+      "size_bytes": 318
+    },
+    {
+      "path": "res/0K.xml",
+      "size_bytes": 548
+    },
+    {
+      "path": "res/0M.xml",
+      "size_bytes": 1064
+    },
+    {
+      "path": "res/0c.9.png",
+      "size_bytes": 267
+    },
+    {
+      "path": "res/0x.9.png",
+      "size_bytes": 209
+    },
+    {
+      "path": "res/1I.9.png",
+      "size_bytes": 2305
+    },
+    {
+      "path": "res/1J.9.png",
+      "size_bytes": 1731
+    },
+    {
+      "path": "res/1e.9.png",
+      "size_bytes": 171
+    },
+    {
+      "path": "res/27.xml",
+      "size_bytes": 336
+    },
+    {
+      "path": "res/2P.png",
+      "size_bytes": 262
+    },
+    {
+      "path": "res/2d.png",
+      "size_bytes": 145
+    },
+    {
+      "path": "res/2f.xml",
+      "size_bytes": 1916
+    },
+    {
+      "path": "res/2j.xml",
+      "size_bytes": 2072
+    },
+    {
+      "path": "res/2t.png",
+      "size_bytes": 20425
+    },
+    {
+      "path": "res/33.9.png",
+      "size_bytes": 541
+    },
+    {
+      "path": "res/3u.9.png",
+      "size_bytes": 258
+    },
+    {
+      "path": "res/42.9.png",
+      "size_bytes": 214
+    },
+    {
+      "path": "res/46.xml",
+      "size_bytes": 780
+    },
+    {
+      "path": "res/49.png",
+      "size_bytes": 595
+    },
+    {
+      "path": "res/4Q.png",
+      "size_bytes": 3280
+    },
+    {
+      "path": "res/4Y.png",
+      "size_bytes": 9325
+    },
+    {
+      "path": "res/4_.xml",
+      "size_bytes": 692
+    },
+    {
+      "path": "res/4k.png",
+      "size_bytes": 201
+    },
+    {
+      "path": "res/4u.xml",
+      "size_bytes": 756
+    },
+    {
+      "path": "res/5D.9.png",
+      "size_bytes": 272
+    },
+    {
+      "path": "res/5T.xml",
+      "size_bytes": 852
+    },
+    {
+      "path": "res/5U.png",
+      "size_bytes": 396
+    },
+    {
+      "path": "res/62.9.png",
+      "size_bytes": 210
+    },
+    {
+      "path": "res/65.9.png",
+      "size_bytes": 235
+    },
+    {
+      "path": "res/6Q.xml",
+      "size_bytes": 688
+    },
+    {
+      "path": "res/6t.png",
+      "size_bytes": 227
+    },
+    {
+      "path": "res/7C.9.png",
+      "size_bytes": 430
+    },
+    {
+      "path": "res/7G.xml",
+      "size_bytes": 1116
+    },
+    {
+      "path": "res/7H.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/7I.9.png",
+      "size_bytes": 345
+    },
+    {
+      "path": "res/7N.xml",
+      "size_bytes": 372
+    },
+    {
+      "path": "res/7_.9.png",
+      "size_bytes": 813
+    },
+    {
+      "path": "res/7i.png",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/7o.9.png",
+      "size_bytes": 525
+    },
+    {
+      "path": "res/80.xml",
+      "size_bytes": 2688
+    },
+    {
+      "path": "res/8K.xml",
+      "size_bytes": 412
+    },
+    {
+      "path": "res/8h.9.png",
+      "size_bytes": 207
+    },
+    {
+      "path": "res/8h.png",
+      "size_bytes": 946
+    },
+    {
+      "path": "res/9N.9.png",
+      "size_bytes": 187
+    },
+    {
+      "path": "res/9P.xml",
+      "size_bytes": 600
+    },
+    {
+      "path": "res/9T.xml",
+      "size_bytes": 932
+    },
+    {
+      "path": "res/9T1.xml",
+      "size_bytes": 1656
+    },
+    {
+      "path": "res/9T2.xml",
+      "size_bytes": 1028
+    },
+    {
+      "path": "res/9V.xml",
+      "size_bytes": 1560
+    },
+    {
+      "path": "res/9X.9.png",
+      "size_bytes": 192
+    },
+    {
+      "path": "res/9n.9.png",
+      "size_bytes": 178
+    },
+    {
+      "path": "res/9z.png",
+      "size_bytes": 593
+    },
+    {
+      "path": "res/9z.xml",
+      "size_bytes": 388
+    },
+    {
+      "path": "res/A1.xml",
+      "size_bytes": 872
+    },
+    {
+      "path": "res/A4.xml",
+      "size_bytes": 680
+    },
+    {
+      "path": "res/AN.xml",
+      "size_bytes": 984
+    },
+    {
+      "path": "res/BG.9.png",
+      "size_bytes": 190
+    },
+    {
+      "path": "res/BJ.xml",
+      "size_bytes": 640
+    },
+    {
+      "path": "res/BL.9.png",
+      "size_bytes": 229
+    },
+    {
+      "path": "res/BM.png",
+      "size_bytes": 12293
+    },
+    {
+      "path": "res/BM1.png",
+      "size_bytes": 159
+    },
+    {
+      "path": "res/BV.png",
+      "size_bytes": 39592
+    },
+    {
+      "path": "res/BW.xml",
+      "size_bytes": 548
+    },
+    {
+      "path": "res/Be.xml",
+      "size_bytes": 2648
+    },
+    {
+      "path": "res/Br.xml",
+      "size_bytes": 1688
+    },
+    {
+      "path": "res/CH.png",
+      "size_bytes": 17804
+    },
+    {
+      "path": "res/CK.9.png",
+      "size_bytes": 244
+    },
+    {
+      "path": "res/Cg.xml",
+      "size_bytes": 424
+    },
+    {
+      "path": "res/D5.xml",
+      "size_bytes": 812
+    },
+    {
+      "path": "res/DL.9.png",
+      "size_bytes": 178
+    },
+    {
+      "path": "res/DZ.xml",
+      "size_bytes": 320
+    },
+    {
+      "path": "res/D_.9.png",
+      "size_bytes": 178
+    },
+    {
+      "path": "res/Dh.xml",
+      "size_bytes": 1672
+    },
+    {
+      "path": "res/EA.9.png",
+      "size_bytes": 200
+    },
+    {
+      "path": "res/EP.png",
+      "size_bytes": 310
+    },
+    {
+      "path": "res/Eg.xml",
+      "size_bytes": 1716
+    },
+    {
+      "path": "res/FW.png",
+      "size_bytes": 307
+    },
+    {
+      "path": "res/Fu.xml",
+      "size_bytes": 1352
+    },
+    {
+      "path": "res/G2.9.png",
+      "size_bytes": 1243
+    },
+    {
+      "path": "res/GC.xml",
+      "size_bytes": 828
+    },
+    {
+      "path": "res/GD.xml",
+      "size_bytes": 1096
+    },
+    {
+      "path": "res/GK.xml",
+      "size_bytes": 1172
+    },
+    {
+      "path": "res/GR.xml",
+      "size_bytes": 1208
+    },
+    {
+      "path": "res/Gf.png",
+      "size_bytes": 984
+    },
+    {
+      "path": "res/Gt.9.png",
+      "size_bytes": 202
+    },
+    {
+      "path": "res/Gt.xml",
+      "size_bytes": 1012
+    },
+    {
+      "path": "res/H-.png",
+      "size_bytes": 203
+    },
+    {
+      "path": "res/Hd.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/IX.9.png",
+      "size_bytes": 1544
+    },
+    {
+      "path": "res/In.xml",
+      "size_bytes": 468
+    },
+    {
+      "path": "res/JJ.9.png",
+      "size_bytes": 280
+    },
+    {
+      "path": "res/Jl.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/K5.xml",
+      "size_bytes": 1656
+    },
+    {
+      "path": "res/KH.9.png",
+      "size_bytes": 618
+    },
+    {
+      "path": "res/KM.png",
+      "size_bytes": 415
+    },
+    {
+      "path": "res/K_.9.png",
+      "size_bytes": 216
+    },
+    {
+      "path": "res/Ke.xml",
+      "size_bytes": 2360
+    },
+    {
+      "path": "res/Kf.png",
+      "size_bytes": 44224
+    },
+    {
+      "path": "res/L_.xml",
+      "size_bytes": 1064
+    },
+    {
+      "path": "res/Lf.xml",
+      "size_bytes": 1656
+    },
+    {
+      "path": "res/Li.9.png",
+      "size_bytes": 1779
+    },
+    {
+      "path": "res/M7.xml",
+      "size_bytes": 1196
+    },
+    {
+      "path": "res/MF.9.png",
+      "size_bytes": 2816
+    },
+    {
+      "path": "res/MO.xml",
+      "size_bytes": 424
+    },
+    {
+      "path": "res/MQ.png",
+      "size_bytes": 513
+    },
+    {
+      "path": "res/Mp.xml",
+      "size_bytes": 792
+    },
+    {
+      "path": "res/N4.png",
+      "size_bytes": 26295
+    },
+    {
+      "path": "res/NA.9.png",
+      "size_bytes": 2505
+    },
+    {
+      "path": "res/NF.xml",
+      "size_bytes": 328
+    },
+    {
+      "path": "res/NG.png",
+      "size_bytes": 322
+    },
+    {
+      "path": "res/NM.xml",
+      "size_bytes": 484
+    },
+    {
+      "path": "res/NZ.9.png",
+      "size_bytes": 182
+    },
+    {
+      "path": "res/Nk.9.png",
+      "size_bytes": 776
+    },
+    {
+      "path": "res/No.9.png",
+      "size_bytes": 199
+    },
+    {
+      "path": "res/Nu.xml",
+      "size_bytes": 1728
+    },
+    {
+      "path": "res/Ol.xml",
+      "size_bytes": 1656
+    },
+    {
+      "path": "res/Pa.9.png",
+      "size_bytes": 738
+    },
+    {
+      "path": "res/Pb.png",
+      "size_bytes": 631
+    },
+    {
+      "path": "res/Pg.9.png",
+      "size_bytes": 207
+    },
+    {
+      "path": "res/QJ.9.png",
+      "size_bytes": 189
+    },
+    {
+      "path": "res/QZ.xml",
+      "size_bytes": 124
+    },
+    {
+      "path": "res/Qd.xml",
+      "size_bytes": 796
+    },
+    {
+      "path": "res/Qt.xml",
+      "size_bytes": 980
+    },
+    {
+      "path": "res/RH.xml",
+      "size_bytes": 832
+    },
+    {
+      "path": "res/RV.png",
+      "size_bytes": 563
+    },
+    {
+      "path": "res/SV.9.png",
+      "size_bytes": 211
+    },
+    {
+      "path": "res/Su.9.png",
+      "size_bytes": 178
+    },
+    {
+      "path": "res/Th.png",
+      "size_bytes": 785
+    },
+    {
+      "path": "res/Tj.9.png",
+      "size_bytes": 327
+    },
+    {
+      "path": "res/Tn.xml",
+      "size_bytes": 768
+    },
+    {
+      "path": "res/U8.xml",
+      "size_bytes": 2660
+    },
+    {
+      "path": "res/UE.9.png",
+      "size_bytes": 222
+    },
+    {
+      "path": "res/UR.png",
+      "size_bytes": 422
+    },
+    {
+      "path": "res/UX.xml",
+      "size_bytes": 508
+    },
+    {
+      "path": "res/V1.xml",
+      "size_bytes": 864
+    },
+    {
+      "path": "res/V7.xml",
+      "size_bytes": 304
+    },
+    {
+      "path": "res/VM.xml",
+      "size_bytes": 328
+    },
+    {
+      "path": "res/VN.xml",
+      "size_bytes": 684
+    },
+    {
+      "path": "res/VT.xml",
+      "size_bytes": 640
+    },
+    {
+      "path": "res/W4.9.png",
+      "size_bytes": 217
+    },
+    {
+      "path": "res/Wh.png",
+      "size_bytes": 171
+    },
+    {
+      "path": "res/Wr.png",
+      "size_bytes": 335
+    },
+    {
+      "path": "res/Wz.png",
+      "size_bytes": 196
+    },
+    {
+      "path": "res/X3.9.png",
+      "size_bytes": 221
+    },
+    {
+      "path": "res/X4.9.png",
+      "size_bytes": 187
+    },
+    {
+      "path": "res/XG.png",
+      "size_bytes": 2093
+    },
+    {
+      "path": "res/XK.xml",
+      "size_bytes": 516
+    },
+    {
+      "path": "res/XP.png",
+      "size_bytes": 12334
+    },
+    {
+      "path": "res/XW.xml",
+      "size_bytes": 124
+    },
+    {
+      "path": "res/XY.xml",
+      "size_bytes": 264
+    },
+    {
+      "path": "res/Xx.xml",
+      "size_bytes": 516
+    },
+    {
+      "path": "res/Y7.9.png",
+      "size_bytes": 212
+    },
+    {
+      "path": "res/YG.9.png",
+      "size_bytes": 203
+    },
+    {
+      "path": "res/YW.xml",
+      "size_bytes": 372
+    },
+    {
+      "path": "res/Yt.9.png",
+      "size_bytes": 209
+    },
+    {
+      "path": "res/Yw.9.png",
+      "size_bytes": 186
+    },
+    {
+      "path": "res/Z8.png",
+      "size_bytes": 420
+    },
+    {
+      "path": "res/ZI.png",
+      "size_bytes": 681
+    },
+    {
+      "path": "res/ZL.xml",
+      "size_bytes": 756
+    },
+    {
+      "path": "res/ZN.9.png",
+      "size_bytes": 229
+    },
+    {
+      "path": "res/ZN.xml",
+      "size_bytes": 1000
+    },
+    {
+      "path": "res/Zg.xml",
+      "size_bytes": 1028
+    },
+    {
+      "path": "res/_G.xml",
+      "size_bytes": 484
+    },
+    {
+      "path": "res/_o.xml",
+      "size_bytes": 316
+    },
+    {
+      "path": "res/_q.png",
+      "size_bytes": 173
+    },
+    {
+      "path": "res/aG.xml",
+      "size_bytes": 532
+    },
+    {
+      "path": "res/aM.xml",
+      "size_bytes": 852
+    },
+    {
+      "path": "res/aU.9.png",
+      "size_bytes": 448
+    },
+    {
+      "path": "res/aW.xml",
+      "size_bytes": 124
+    },
+    {
+      "path": "res/ar.png",
+      "size_bytes": 391
+    },
+    {
+      "path": "res/bB.png",
+      "size_bytes": 3554
+    },
+    {
+      "path": "res/bL.xml",
+      "size_bytes": 1408
+    },
+    {
+      "path": "res/bX.9.png",
+      "size_bytes": 244
+    },
+    {
+      "path": "res/bb.xml",
+      "size_bytes": 516
+    },
+    {
+      "path": "res/bi.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/bt.xml",
+      "size_bytes": 840
+    },
+    {
+      "path": "res/c5.xml",
+      "size_bytes": 316
+    },
+    {
+      "path": "res/cL.xml",
+      "size_bytes": 640
+    },
+    {
+      "path": "res/cm.xml",
+      "size_bytes": 920
+    },
+    {
+      "path": "res/color-v23/abc_color_highlight_material.xml",
+      "size_bytes": 544
+    },
+    {
+      "path": "res/color-v23/abc_tint_btn_checkable.xml",
+      "size_bytes": 624
+    },
+    {
+      "path": "res/color-v23/abc_tint_default.xml",
+      "size_bytes": 1120
+    },
+    {
+      "path": "res/color-v23/abc_tint_edittext.xml",
+      "size_bytes": 668
+    },
+    {
+      "path": "res/color-v23/abc_tint_seek_thumb.xml",
+      "size_bytes": 500
+    },
+    {
+      "path": "res/color-v23/abc_tint_spinner.xml",
+      "size_bytes": 668
+    },
+    {
+      "path": "res/color-v23/abc_tint_switch_track.xml",
+      "size_bytes": 664
+    },
+    {
+      "path": "res/color/abc_primary_text_material_dark.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/color/abc_primary_text_material_light.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/color/abc_search_url_text.xml",
+      "size_bytes": 588
+    },
+    {
+      "path": "res/color/switch_thumb_material_dark.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/color/switch_thumb_material_light.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/d3.png",
+      "size_bytes": 432
+    },
+    {
+      "path": "res/d5.9.png",
+      "size_bytes": 851
+    },
+    {
+      "path": "res/dO.xml",
+      "size_bytes": 3472
+    },
+    {
+      "path": "res/dW.png",
+      "size_bytes": 267
+    },
+    {
+      "path": "res/dY.png",
+      "size_bytes": 404
+    },
+    {
+      "path": "res/eA.xml",
+      "size_bytes": 1868
+    },
+    {
+      "path": "res/eR.png",
+      "size_bytes": 356
+    },
+    {
+      "path": "res/eT.9.png",
+      "size_bytes": 318
+    },
+    {
+      "path": "res/eT.xml",
+      "size_bytes": 484
+    },
+    {
+      "path": "res/ej.9.png",
+      "size_bytes": 167
+    },
+    {
+      "path": "res/ev.9.png",
+      "size_bytes": 228
+    },
+    {
+      "path": "res/fM.9.png",
+      "size_bytes": 825
+    },
+    {
+      "path": "res/g-.png",
+      "size_bytes": 585
+    },
+    {
+      "path": "res/gZ.9.png",
+      "size_bytes": 524
+    },
+    {
+      "path": "res/gj.9.png",
+      "size_bytes": 237
+    },
+    {
+      "path": "res/gt.9.png",
+      "size_bytes": 205
+    },
+    {
+      "path": "res/h4.xml",
+      "size_bytes": 2124
+    },
+    {
+      "path": "res/h7.9.png",
+      "size_bytes": 1096
+    },
+    {
+      "path": "res/hP.xml",
+      "size_bytes": 864
+    },
+    {
+      "path": "res/hP1.xml",
+      "size_bytes": 1584
+    },
+    {
+      "path": "res/hZ.9.png",
+      "size_bytes": 167
+    },
+    {
+      "path": "res/hh.9.png",
+      "size_bytes": 212
+    },
+    {
+      "path": "res/hq.xml",
+      "size_bytes": 612
+    },
+    {
+      "path": "res/i6.9.png",
+      "size_bytes": 186
+    },
+    {
+      "path": "res/iO.png",
+      "size_bytes": 228
+    },
+    {
+      "path": "res/iQ.png",
+      "size_bytes": 489
+    },
+    {
+      "path": "res/iR.9.png",
+      "size_bytes": 484
+    },
+    {
+      "path": "res/io.9.png",
+      "size_bytes": 1526
+    },
+    {
+      "path": "res/j3.xml",
+      "size_bytes": 1100
+    },
+    {
+      "path": "res/j4.png",
+      "size_bytes": 785
+    },
+    {
+      "path": "res/jS.9.png",
+      "size_bytes": 236
+    },
+    {
+      "path": "res/jS1.9.png",
+      "size_bytes": 167
+    },
+    {
+      "path": "res/jW.png",
+      "size_bytes": 753
+    },
+    {
+      "path": "res/k8.xml",
+      "size_bytes": 1560
+    },
+    {
+      "path": "res/kJ.9.png",
+      "size_bytes": 208
+    },
+    {
+      "path": "res/k_.xml",
+      "size_bytes": 508
+    },
+    {
+      "path": "res/kj.xml",
+      "size_bytes": 2520
+    },
+    {
+      "path": "res/kn.xml",
+      "size_bytes": 816
+    },
+    {
+      "path": "res/kp.png",
+      "size_bytes": 224
+    },
+    {
+      "path": "res/lN.xml",
+      "size_bytes": 320
+    },
+    {
+      "path": "res/lP.9.png",
+      "size_bytes": 194
+    },
+    {
+      "path": "res/lf.png",
+      "size_bytes": 4627
+    },
+    {
+      "path": "res/lh.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/ly.png",
+      "size_bytes": 272
+    },
+    {
+      "path": "res/m0.png",
+      "size_bytes": 267
+    },
+    {
+      "path": "res/mC.png",
+      "size_bytes": 14776
+    },
+    {
+      "path": "res/mh.xml",
+      "size_bytes": 516
+    },
+    {
+      "path": "res/mm.9.png",
+      "size_bytes": 345
+    },
+    {
+      "path": "res/nI.9.png",
+      "size_bytes": 207
+    },
+    {
+      "path": "res/nT.xml",
+      "size_bytes": 1160
+    },
+    {
+      "path": "res/nf.png",
+      "size_bytes": 1208
+    },
+    {
+      "path": "res/o9.9.png",
+      "size_bytes": 260
+    },
+    {
+      "path": "res/oP.xml",
+      "size_bytes": 816
+    },
+    {
+      "path": "res/o_.png",
+      "size_bytes": 651
+    },
+    {
+      "path": "res/og.png",
+      "size_bytes": 31246
+    },
+    {
+      "path": "res/op.9.png",
+      "size_bytes": 286
+    },
+    {
+      "path": "res/pk.png",
+      "size_bytes": 275
+    },
+    {
+      "path": "res/ps.9.png",
+      "size_bytes": 178
+    },
+    {
+      "path": "res/py.9.png",
+      "size_bytes": 217
+    },
+    {
+      "path": "res/qD.9.png",
+      "size_bytes": 2834
+    },
+    {
+      "path": "res/qV.png",
+      "size_bytes": 17152
+    },
+    {
+      "path": "res/qp.png",
+      "size_bytes": 197
+    },
+    {
+      "path": "res/qx.xml",
+      "size_bytes": 2780
+    },
+    {
+      "path": "res/qz.xml",
+      "size_bytes": 1656
+    },
+    {
+      "path": "res/rW.xml",
+      "size_bytes": 688
+    },
+    {
+      "path": "res/rY.xml",
+      "size_bytes": 548
+    },
+    {
+      "path": "res/rj.9.png",
+      "size_bytes": 1098
+    },
+    {
+      "path": "res/rx.xml",
+      "size_bytes": 680
+    },
+    {
+      "path": "res/s0.png",
+      "size_bytes": 403
+    },
+    {
+      "path": "res/s3.9.png",
+      "size_bytes": 245
+    },
+    {
+      "path": "res/sA.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "res/sN.png",
+      "size_bytes": 10212
+    },
+    {
+      "path": "res/sg.9.png",
+      "size_bytes": 226
+    },
+    {
+      "path": "res/sn.xml",
+      "size_bytes": 400
+    },
+    {
+      "path": "res/t8.xml",
+      "size_bytes": 1012
+    },
+    {
+      "path": "res/tG.png",
+      "size_bytes": 476
+    },
+    {
+      "path": "res/tL.xml",
+      "size_bytes": 716
+    },
+    {
+      "path": "res/tP.png",
+      "size_bytes": 7914
+    },
+    {
+      "path": "res/tS.png",
+      "size_bytes": 321
+    },
+    {
+      "path": "res/tU.9.png",
+      "size_bytes": 208
+    },
+    {
+      "path": "res/tZ.9.png",
+      "size_bytes": 198
+    },
+    {
+      "path": "res/te.png",
+      "size_bytes": 278
+    },
+    {
+      "path": "res/u0.xml",
+      "size_bytes": 1196
+    },
+    {
+      "path": "res/u3.png",
+      "size_bytes": 513
+    },
+    {
+      "path": "res/uG.png",
+      "size_bytes": 7271
+    },
+    {
+      "path": "res/uJ.xml",
+      "size_bytes": 848
+    },
+    {
+      "path": "res/uL.9.png",
+      "size_bytes": 966
+    },
+    {
+      "path": "res/uj.9.png",
+      "size_bytes": 196
+    },
+    {
+      "path": "res/ut.9.png",
+      "size_bytes": 754
+    },
+    {
+      "path": "res/uu.9.png",
+      "size_bytes": 204
+    },
+    {
+      "path": "res/v-.png",
+      "size_bytes": 7738
+    },
+    {
+      "path": "res/v4.9.png",
+      "size_bytes": 208
+    },
+    {
+      "path": "res/v9.xml",
+      "size_bytes": 1392
+    },
+    {
+      "path": "res/vG.xml",
+      "size_bytes": 1396
+    },
+    {
+      "path": "res/vJ.xml",
+      "size_bytes": 528
+    },
+    {
+      "path": "res/vq.xml",
+      "size_bytes": 1020
+    },
+    {
+      "path": "res/vz.9.png",
+      "size_bytes": 181
+    },
+    {
+      "path": "res/wL.9.png",
+      "size_bytes": 437
+    },
+    {
+      "path": "res/w_.png",
+      "size_bytes": 214
+    },
+    {
+      "path": "res/x3.9.png",
+      "size_bytes": 212
+    },
+    {
+      "path": "res/xH.png",
+      "size_bytes": 186
+    },
+    {
+      "path": "res/xL.xml",
+      "size_bytes": 932
+    },
+    {
+      "path": "res/xR.9.png",
+      "size_bytes": 194
+    },
+    {
+      "path": "res/xj.xml",
+      "size_bytes": 588
+    },
+    {
+      "path": "res/yH.9.png",
+      "size_bytes": 184
+    },
+    {
+      "path": "res/yV.xml",
+      "size_bytes": 576
+    },
+    {
+      "path": "res/yY.9.png",
+      "size_bytes": 186
+    },
+    {
+      "path": "res/yg.9.png",
+      "size_bytes": 395
+    },
+    {
+      "path": "res/yi.png",
+      "size_bytes": 5605
+    },
+    {
+      "path": "res/z9.9.png",
+      "size_bytes": 417
+    },
+    {
+      "path": "res/zE.png",
+      "size_bytes": 324
+    },
+    {
+      "path": "res/zV.9.png",
+      "size_bytes": 2463
+    },
+    {
+      "path": "res/zq.xml",
+      "size_bytes": 464
+    },
+    {
+      "path": "resources.arsc",
+      "size_bytes": 320104
+    }
+  ],
+  "notes": [
+    "Static analysis only; indicator counts do not prove runtime behavior.",
+    "No decompiled source, raw DEX strings, tokens, cookies, or user data are committed.",
+    "The private server implementation and server-side account/storage logic are not recoverable from this APK alone.",
+    "Validate network behavior only with a test account and test data that you control."
+  ]
+}
